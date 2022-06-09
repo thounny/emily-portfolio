@@ -16,48 +16,57 @@
     <!-- locomotive-scroll -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css">
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&family=Tapestry&display=swap"
+        rel="stylesheet">
 </head>
 
 <body id="js-scroll">
     <div class="gradient-about">
-    <div class="wrapper">
+        <div class="wrapper">
 
-        <!-- menu -->
-        <nav class="menu">
-            <div class="menu__logo">
-                <a href="index.html">em</a>
+            <!-- menu -->
+            <nav class="menu">
+                <div class="menu__logo">
+                    <a href="index.html">em</a>
+                </div>
+                <div class="menu__items">
+                    <div class="menu__items-link"><a href="index.html">Projects</a></div>
+                    <div class="menu__items-link active"><a href="about.html">About</a></div>
+                </div>
+            </nav>
+
+            <!-- about-section -->
+            <div class="about__container" data-scroll-section>
+                <p class="about__container-data" data-scroll>Hi! My name is <span>Emily Molander</span> and I'm a Mixed
+                    Media
+                    Artist and Photographer, based in <span>Atlanta,</span> Georgia.</p>
+
+                <p data-scroll>If you have any questions or would like to have a chat, don't hesitate to <span
+                        class="about__container-contact-link"><a href="mailto:emilygmolander@gmail.com"
+                            target="_blank">get
+                            in touch.</a></span></p>
+
+                <p class="about__container-link" data-scroll><a href="https://www.instagram.com/emilymolander"
+                        target="_blank">Winner of Best Artist Honorable Mention and <br> best in the fucking world
+                        poggers</a>.</p>
             </div>
-            <div class="menu__items">
-                <div class="menu__items-link"><a href="index.html">Projects</a></div>
-                <div class="menu__items-link active"><a href="about.html">About</a></div>
-            </div>
-        </nav>
 
-        <!-- about-section -->
-        <div class="about__container" data-scroll-section>
-            <p class="about__container-data" data-scroll>Hi! My name is <span>Emily Molander</span> and I'm a Mixed Media
-                Artist and Photographer, based in <span>Atlanta,</span> Georgia.</p>
-
-            <p data-scroll>If you have any questions or would like to have a chat, don't hesitate to <span
-                    class="about__container-contact-link"><a href="mailto:emilygmolander@gmail.com" target="_blank">get
-                        in touch.</a></span></p>
-
-            <p class="about__container-link" data-scroll><a href="https://www.instagram.com/emilymolander"
-                    target="_blank">Winner of Best Artist Honorable Mention and <br> best in the fucking world poggers</a>.</p>
+            <div class="cursor-follow"></div>
         </div>
-
-        <div class="cursor-follow"></div>
     </div>
-</div>
     <script src="js/script.js"></script>
     <script>
-        // // smooth scroll 
-        // const scroll = new LocomotiveScroll({
-        //     el: document.querySelector('#js-scroll'),
-        //     smooth: true,
-        //     smoothMobile: true,
-        //     inertia: 0.75
-        // });
+        // smooth scroll 
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('#js-scroll'),
+            smooth: true,
+            smoothMobile: true,
+            inertia: 0.75
+        });
 
         // div following mouse 
         TweenMax.from(".cursor-follow", 2, {

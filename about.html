@@ -3,54 +3,53 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emily Molander | Portfolio</title>
     <meta name="author" content="thounny and tayo @doomsdayprotocol">
 
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- GreenSock -->
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- greensock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <!-- Smooth Scroll -->
+
+    <!-- locomotive-scroll -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css">
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&family=Tapestry&display=swap" rel="stylesheet">
 </head>
 
 <body id="js-scroll">
     <div class="wrapper">
-        <!-- MENU CONTENT -->
+
+        <!-- menu -->
         <nav class="menu">
-            <div class="menu_logo">
+            <div class="menu__logo">
                 <a href="index.html">em</a>
             </div>
-            <div class="menu-items">
-                <div class="menu_items-link"><a href="index.html">Projects</a></div>
-                <div class="menu_items-link active"><a href="index.html">About</a></div>
+            <div class="menu__items">
+                <div class="menu__items-link"><a href="index.html">Projects</a></div>
+                <div class="menu__items-link active"><a href="about.html">About</a></div>
             </div>
         </nav>
 
-        <!-- ABOUT SECTION -->
-        <div class="about_container" data-scroll-section>
-            <p class="about_container-data" data-scroll>Hi! My name is <span>Emily Molander</span> and I'm a Mixed Media
+        <!-- about-section -->
+        <div class="about__container" data-scroll-section>
+            <p class="about__container-data" data-scroll>Hi! My name is <span>Emily Molander</span> and I'm a Mixed Media
                 Artist and Photographer, based in <span>Atlanta,</span> Georgia.</p>
 
-            <p data-scroll>If you want to work together, <span class="about_container-contact-link"><a
-                        href="mailto:emilygmolander@gmail.com" target="_blank"> let's get in touch!</a></span></p>
+            <p data-scroll>If you have any questions or would like to have a chat, don't hesitate to <span
+                    class="about__container-contact-link"><a href="mailto:emilygmolander@gmail.com" target="_blank">get
+                        in touch.</a></span></p>
 
-            <p class="about_container-link" data-scroll><a href="https://www.instagram.com/emilymolander"
-                    target="_blank">Winner of Best Artist Honorable Mention and
-                    <br> in the fucking world poggers</a>."</p>
+            <p class="about__container-link" data-scroll><a href="https://www.instagram.com/emilymolander"
+                    target="_blank">Winner of Best Artist Honorable Mention and <br> best in the fucking world poggers</a>.</p>
         </div>
 
         <div class="cursor-follow"></div>
     </div>
-    <script src="js/horizontal-scroll.js"></script>
-    <!-- SMOOTH SCROLL -->
+    <script src="js/script.js"></script>
     <script>
+        // smooth scroll 
         const scroll = new LocomotiveScroll({
             el: document.querySelector('#js-scroll'),
             smooth: true,
@@ -58,7 +57,7 @@
             inertia: 0.75
         });
 
-        // FOLLOW MOUSE
+        // div following mouse 
         TweenMax.from(".cursor-follow", 2, {
             delay: 1,
             opacity: 0
@@ -66,12 +65,12 @@
 
         follower = document.querySelector('.cursor-follow');
 
-        posX: 0;
-        posY: 0;
-        mouseX: 0;
-        mouseY: 0;
+        posX = 0;
+        posY = 0;
+        mouseX = 0;
+        mouseY = 0;
 
-        TweenMax.to({}, 0.015, {
+        TweenMax.to({}, 0.016, {
             repeat: -1,
             onRepeat: function () {
                 posX += (mouseX - posX) / 9;

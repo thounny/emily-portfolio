@@ -19,6 +19,7 @@
 </head>
 
 <body id="js-scroll">
+    <div class="gradient-about">
     <div class="wrapper">
 
         <!-- menu -->
@@ -47,15 +48,16 @@
 
         <div class="cursor-follow"></div>
     </div>
+</div>
     <script src="js/script.js"></script>
     <script>
-        // smooth scroll 
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('#js-scroll'),
-            smooth: true,
-            smoothMobile: true,
-            inertia: 0.75
-        });
+        // // smooth scroll 
+        // const scroll = new LocomotiveScroll({
+        //     el: document.querySelector('#js-scroll'),
+        //     smooth: true,
+        //     smoothMobile: true,
+        //     inertia: 0.75
+        // });
 
         // div following mouse 
         TweenMax.from(".cursor-follow", 2, {

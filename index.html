@@ -2,68 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emily Molander | Portfolio</title>
-    <meta name="author" content="thounny and tayo @doomsdayprotocol">
+    <meta name="author" content="thounny + tayo @doomsdayprotocol">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
 
+    <!-- greensock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&family=Tapestry&display=swap" rel="stylesheet">
-
 </head>
 
 <body class="home">
     <div class="wrapper">
 
-        <!-- MENU CONTENT -->
-        <nav class="menu_logo">
-            <a href="index.html">em</a>
-    </div>
-    <div class="menu_items">
-        <div class="menu_items-link active"><a href="index.html">Projects</a></div>
-        <div class="menu_items-link"><a href="about.html">About</a></div>
-    </div>
-    </nav>
+        <!-- menu -->
+        <nav class="menu">
+            <div class="menu__logo">
+                <a href="index.html">em</a>
+            </div>
+            <div class="menu__items">
+                <div class="menu__items-link active"><a href="index.html">Projects</a></div>
+                <div class="menu__items-link"><a href="about.html">About</a></div>
+            </div>
+        </nav>
 
-    <!-- HORIZONTAL SCROLL -->
-    <div class="container">
-        <div class="container_item container_item-header">
-            <h1>Emily Molander, <br> Mix Media Artist + Photographer</h1>
+        <!-- horizontal scroll items -->
+        <div class="container">
+            <div class="container__item container__item-header">
+                <h1>Emily Molander, <br> Mix Media Artist <br> + Photographer</h1>
+            </div>
+
+            <div class="container__item container__item-1">
+                <h1 class="container__item-title">
+                    <a href="project.html">Portraits</a>
+                </h1>
+            </div>
+            <div class="container__item container__item-2">
+                <h1 class="container__item-title">
+                    <a href="project.html">Album Art</a>
+                </h1>
+            </div>
+            <div class="container__item container__item-3">
+                <h1 class="container__item-title">
+                    <a href="project.html">Mixed Media</a>
+                </h1>
+            </div>
+            <div class="container__item container__item-4">
+                <h1 class="container__item-title">
+                    <a href="project.html">PeePee</a>
+                </h1>
+            </div>
+            <div class="container__item container__item-5">
+                <h1 class="container__item-title">
+                    <a href="project.html">PooPoo</a>
+                </h1>
+            </div>
         </div>
 
-        <div class="container_item container_item-1">
-            <h1 class="container_item-title">
-                <a href="project.html">Portraits</a>
-            </h1>
-        </div>
-        <div class="container_item container_item-2">
-            <h1 class="container_item-title">
-                <a href="project.html">Album Art</a>
-            </h1>
-        </div>
-        <div class="container_item container_item-3">
-            <h1 class="container_item-title">
-                <a href="project.html">Mixed Media</a>
-            </h1>
-        </div>
     </div>
 
-
-
-    </div>
-
-    <!-- HORIZONTAL SCROLL SCRIPT -->
+    <!-- script -->
     <script src="js/horizontal-scroll.js"></script>
     <script>
-        var blocks = document.getElementsByClassName("container_item");
+        var blocks = document.getElementsByClassName("container__item");
         var container = document.getElementsByClassName("container");
-        var em = new HorizontalScroll.default({
+        var hs = new HorizontalScroll.default({
             blocks: blocks,
             container: container,
             isAnimated: true,
